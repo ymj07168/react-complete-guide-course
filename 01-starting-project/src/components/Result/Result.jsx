@@ -22,7 +22,9 @@ const Result = ({ userInput }) => {
       <tbody>
         {resultData?.map((item, index) => {
           const totalInterest =
-            item.valueEndOfYear - item.annualInvestment * item.year;
+            item.valueEndOfYear -
+            item.annualInvestment * item.year -
+            initialInvestment;
           const totalAmountInvested = item.valueEndOfYear - totalInterest;
 
           return (
