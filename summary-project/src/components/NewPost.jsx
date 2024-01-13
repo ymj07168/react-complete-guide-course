@@ -13,7 +13,7 @@ function NewPost({ onCancel, onAddPost }) {
     setEnteredAuthor(e.target.value);
   };
 
-  const sumbitHandler = (e) => {
+  const sumbitHandler = (event) => {
     event.preventDefault();
     const postData = {
       body: enteredBody,
